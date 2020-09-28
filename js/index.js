@@ -45,7 +45,7 @@ const mainNav = document.querySelector('header nav')
 //constructing the nav bar
 
 const navBarLinks = document.querySelectorAll('a')
-console.log(navBarLinks)
+
 
 navBarLinks[0].textContent = 'Services'
 navBarLinks[0].classList.add('navItemOne')
@@ -90,8 +90,40 @@ navItemEight.backgroundColor = 'magenta'
 const headerText = document.querySelector('h1')
 const headerButton = document.querySelector('button')
 headerButton.textContent = 'Get Started Now!'
-const headerPicture = document.querySelectorAll('#cta-img')
+const headerPicture = document.querySelector('#cta-img')
 const mainText = document.querySelectorAll('.text-content')
 headerText.textContent = siteContent['cta']['h1']
 headerPicture.setAttribute('src', siteContent["cta"]["img-src"])
 
+const mainBodyText =document.querySelectorAll('.text-content')
+mainBodyText[0].querySelector('h4').textContent = siteContent['main-content']['features-h4']
+mainBodyText[0].querySelector('p').textContent = siteContent['main-content']['features-content']
+
+mainBodyText[1].querySelector('h4').textContent = siteContent['main-content']['about-h4']
+mainBodyText[1].querySelector('h4').textContent = siteContent['main-content']['about-content']
+
+mainBodyText[2].querySelector('h4').textContent = siteContent['main-content']['services-h4']
+mainBodyText[2].querySelector('h4').textContent = siteContent['main-content']['services-content']
+
+mainBodyText[3].querySelector('h4').textContent = siteContent['main-content']['product-h4']
+mainBodyText[3].querySelector('h4').textContent = siteContent['main-content']['product-content']
+
+mainBodyText[4].querySelector('h4').textContent = siteContent['main-content']['vision-h4']
+mainBodyText[4].querySelector('h4').textContent = siteContent['main-content']['vision-content']
+
+const mainBodyPicture = document.querySelector('#middle-img')
+mainBodyPicture.setAttribute('src', siteContent['main-content']['middle-img-src'])
+
+//Creating the contact me section
+
+const contactSection = document.querySelector('.contact')
+
+contactSection.getElementsByTagName('h4')[0].textContent= siteContent['contact']['contact-h4']
+contactSection.getElementsByTagName('p')[0].textContent = siteContent['contact']['address']
+contactSection.getElementsByTagName('p')[1].textContent = siteContent['contact']['phone']
+contactSection.getElementsByTagName('p')[2].textContent = siteContent['contact']['email']
+
+//footer
+
+const footer = document.querySelector('footer')
+footer.getElementsByTagName('p')[0].textContent = siteContent['footer']['copyright']
