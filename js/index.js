@@ -40,3 +40,34 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//constructing the nav bar
+
+const navBarLinks = document.querySelectorAll('a')
+console.log(navBarLinks)
+
+navBarLinks[0].textContent = 'Services'
+navBarLinks[0].classList.add('navItemOne')
+
+navBarLinks[1].textContent = 'Product'
+navBarLinks[1].classList.add('navItemTwo')
+
+navBarLinks[2].textContent = 'Vision'
+navBarLinks[2].classList.add('navItemThree')
+
+navBarLinks[3].textContent = 'Features'
+navBarLinks[3].classList.add('navItemThree')
+
+navBarLinks[4].textContent = 'About'
+navBarLinks[4].classList.add('navItemThree')
+
+navBarLinks[5].textContent = 'Contact'
+navBarLinks[5].classList.add('navItemThree')
+
+//Nav bar styles
+navBarLinks.forEach(link =>{
+  link.style.color = 'orange'
+  link.style.backgroundColor = 'blue'
+})
+
+//Adding Links to NavBar
