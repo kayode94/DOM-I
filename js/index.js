@@ -40,6 +40,7 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+const mainNav = document.querySelector('header nav')
 
 //constructing the nav bar
 
@@ -56,18 +57,41 @@ navBarLinks[2].textContent = 'Vision'
 navBarLinks[2].classList.add('navItemThree')
 
 navBarLinks[3].textContent = 'Features'
-navBarLinks[3].classList.add('navItemThree')
+navBarLinks[3].classList.add('navItemFour')
 
 navBarLinks[4].textContent = 'About'
-navBarLinks[4].classList.add('navItemThree')
+navBarLinks[4].classList.add('navItemFive')
 
 navBarLinks[5].textContent = 'Contact'
-navBarLinks[5].classList.add('navItemThree')
+navBarLinks[5].classList.add('navItemSix')
 
 //Nav bar styles
 navBarLinks.forEach(link =>{
-  link.style.color = 'orange'
-  link.style.backgroundColor = 'blue'
+  link.style.color = 'green'
+  link.style.backgroundColor = 'magenta'
 })
 
 //Adding Links to NavBar
+const navItemSeven = document.createElement('a')
+navItemSeven.textContent ='Facts and Info'
+navItemSeven.classList.add('navItemSeven')
+navItemSeven.href='#'
+navItemSeven.style.color = 'green'
+navItemSeven.backgroundColor = 'magenta'
+
+const navItemEight = document.createElement('a')
+navItemEight.textContent = 'Company Partners'
+navItemEight.classList.add('navItemEight')
+navItemEight.href = '#'
+navItemEight.style.color = 'green'
+navItemEight.backgroundColor = 'magenta'
+
+//Creating the main text body
+const headerText = document.querySelector('h1')
+const headerButton = document.querySelector('button')
+headerButton.textContent = 'Get Started Now!'
+const headerPicture = document.querySelectorAll('#cta-img')
+const mainText = document.querySelectorAll('.text-content')
+headerText.textContent = siteContent['cta']['h1']
+headerPicture.setAttribute('src', siteContent["cta"]["img-src"])
+
